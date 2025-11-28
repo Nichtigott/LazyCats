@@ -24,7 +24,7 @@
   };
 
   # see :help nixCats.flake.outputs
-  outputs = { self, nixpkgs, nixCats, ... }@inputs: let
+  outputs = { self, nixpkgs, nixCats, neovim-nightly-overlay, ... }@inputs: let
     inherit (nixCats) utils;
     luaPath = ./.;
     forEachSystem = utils.eachSystem nixpkgs.lib.platforms.all;
